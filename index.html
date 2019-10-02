@@ -1,61 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
 
-    <!--Este comando sirve para poder ajustar la pantalla al dispositivo-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <!--- Esta cabecera hace que se ajuste a la pantalla del dispositivo -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
+    <!--Librerias Bootstrap online -->
+    <link rel="stylesheet" href=css/bootstrap.css>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <title>Pagina de peticion de datos</title>
+    <title>"Busqueda de usuarios Github</title>
+
 </head>
-<body>
-
-<!-- El container tiene marcos -->
-<div class="jumbotron text-center">
-    <h1>Petición de usuarios </h1>
-
-</div>
-
-<div class="container">
-    <div class="subtitulo">
-        <p>Bienvenido al buscador de repositorios</p>
+    <body>
+    <div class="jumbotron text-center">
+        <h1>Búsqueda</h1>
     </div>
+        <form action= "index.html" class= "login-form">
 
-    <div class="row"</div>
 
-        <div class="col-sm-4">
-            <div class="form-group">
-                <label for="usr">Nombre:</label>
-                <input type="text" class="form-control" id="usr">
+            <div class="txtb">
+                <input type="text">
+                <span data-placeholder="Usuario"</span>
             </div>
-        </div>
-        <div class="col-sm-6">Introduce el nombre</div>
-        <div class="col-sm-2">
-            <p>Borrando</p>
-            <button type="button" class="btn btn-primary active">Buscar</button>
-            <script>$(document).ready(function(){
-                ("btn-primary active").click(function(){
-                    $("p").hide();
-                }
-            }</script>
-
-
-
-            <!--  <button type="button" class="btn btn-primary disabled">Rehacer Búsqueda</button> ---!>
-
+            <input type="submit" class="busq" value="Buscar">
+        <div class="bottom-text">
+            <p>Encuentra tu usuario</p>
 
         </div>
-    </div>
-</div>
 
-</body>
+        </form>
+    </body>
 </html>

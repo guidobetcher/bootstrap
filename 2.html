@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--Este comando sirve para poder ajustar la pantalla al dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Pagina de peticion de datos</title>
+    <script>
+        function clickFirstButton() {
+            document.ready(function () {
+                $("#b1").click(function() {
+                    alert("HTML: " + $("wwww.google.es").html());
+                }
+    </script>
+</head>
+<body>
+
+<!-- El container tiene marcos -->
+<div class="jumbotron text-center">
+    <h1>Petición de usuarios </h1>
+
+</div>
+
+<div class="container">
+    <div class="subtitulo">
+        <p>Bienvenido al buscador de repositorios</p>
+    </div>
+
+    <!--- Esta clase row hace que se organice en 3 columna. Si lo quitas la primera columna ocupa todo el espacio ---!>
+
+    <div class="row">
+    </div>
+
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="usr">Nombre:</label>
+                <input type="text" class="form-control" id="usr">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <button type="button"  id="b1" class="btn btn-primary active">Rehacer Búsqueda</button>
+            <!---<button >Prueba</button> --!>
+
+        </div>
+
+        <div class="col-sm-2">
+            <p>Borrando</p>
+            <input
+                    class="btn btn-primary active" name="bBuscar" onClick="clickFirstButton()"
+                    type="button"
+                    value="Buscar">
+        </div>
+</div>
+
+</body>
+</html>
