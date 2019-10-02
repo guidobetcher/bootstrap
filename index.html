@@ -40,8 +40,19 @@
         </div>
         <div class="col-sm-6">Introduce el nombre</div>
         <div class="col-sm-2">
-            <button type="button" class="btn btn-primary">Buscar</button>
-            <a href="/GET www.github.com" class="btn btn-primary" role="button">Link Button</a>
+            <p>Borrando</p>
+            <button type="button" class="btn btn-primary active">Buscar</button>
+            <script>$(document).ready(function(){
+                ("btn-primary active").click(function(){
+                    $("p").hide();
+                }
+            }</script>
+
+
+
+            <!--  <button type="button" class="btn btn-primary disabled">Rehacer Búsqueda</button> ---!>
+
+
         </div>
     </div>
 </div>
