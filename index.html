@@ -14,20 +14,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <title>"Busqueda de usuarios Github</title>
+    <script>
+        $(document).ready(function(){
+            $("#enviarS").click(function(){
+                alert("Text: " + $("#test").text());
+            });
+            </script>
 
 </head>
     <body>
     <div class="jumbotron text-center">
         <h1>Búsqueda</h1>
     </div>
-        <form action= "index.html" class= "login-form">
+        <form action= "http://api.github.com/" class= "login-form"  method="post">
 
-
-            <div class="txtb">
+            <div>
                 <input type="text">
                 <span data-placeholder="Usuario"</span>
             </div>
-            <input type="submit" class="busq" value="Buscar">
+            <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
         <div class="bottom-text">
             <p>Encuentra tu usuario</p>
 
