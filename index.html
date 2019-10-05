@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <!--- Esta cabecera hace que se ajuste a la pantalla del dispositivo -->
@@ -13,31 +13,51 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <title>"Busqueda de usuarios Github</title>
-    <script>
-        $(document).ready(function(){
-            $("#enviarS").click(function(){
-                alert("Text: " + $("#test").text());
-            });
-            </script>
-
+    <title>Busqueda de usuarios Github</title>
 </head>
-    <body>
-    <div class="jumbotron text-center">
-        <h1>Búsqueda</h1>
-    </div>
-        <form action= "http://api.github.com/" class= "login-form"  method="post">
+<body>
 
-            <div>
-                <input type="text">
-                <span data-placeholder="Usuario"</span>
-            </div>
-            <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
-        <div class="bottom-text">
-            <p>Encuentra tu usuario</p>
+<div class="jumbotron text-center"><h1>Búsqueda</h1></div>
+<div class="container">
+<div class="row">
+
+    <div class="col-sm-10">
+        <div class="form-group">
+            <label for="usr">Nombre:</label>
+            <input type="text" class="form-control" id="usr">
 
         </div>
+    </div>
 
-        </form>
-    </body>
+    <div class="col-sm-2">
+
+        <input
+                class="btn btn-primary active" id="bbuscar"
+                type="button"
+                value="Buscar">
+        <script>
+            $(document).ready(function () {
+                $("#bbuscar").click(function () {
+                    $("#usr").text();
+                });
+            });
+
+        </script>
+    </div>
+
+    <div id="resultado" class="col-sm-10"
+
+</div>
+
+</div>
+</div>
+    <!---
+        <form action= "http://api.github.com/" class= "login-form"  method="get">
+            <div>
+                <input type="text" name= "/users">
+            </div>
+            <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
+        <!---<div class="bottom-text"> <p>Encuentra tu usuario</p>--->
+
+</body>
 </html>
