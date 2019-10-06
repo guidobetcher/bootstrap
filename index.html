@@ -19,37 +19,62 @@
 
 <div class="jumbotron text-center"><h1>Búsqueda</h1></div>
 <div class="container">
-<div class="row">
+    <div class="row">
 
-    <div class="col-sm-10">
-        <div class="form-group">
-            <label for="usr">Nombre:</label>
-            <input type="text" class="form-control" id="usr">
+        <div class="col-sm-10">
+            <div class="form-group">
+                <label usr">Nombre:</label>
+                <input type="text" class="form-control" id="usr">
 
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+
+            <input class="btn btn-primary active" id="bbuscar" type="button" value="Buscar">
+            <script>
+                $(document).ready(function () {
+                    $("#bbuscar").click(function () {
+                        $("table").empty();
+                        $.get("https://api.github.com/users/" + $(#usr).val() + "/repos", function (data, status) {
+                            for (var I = 0; data.length; i++) {
+                                $("table").append("<tr><td>") + data[i].name + "<tr><td>" + data[i].description +
+                                "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>"
+                            }
+                        });
+
+
+                    });
+                });
+
+
+            </script>
+        </div>
+
+
+        <div class="col-sm-10">
+            <p>Mostrar usuario</p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Hol</td>
+                        <td>2</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <script>
+            </script>
         </div>
     </div>
 
-    <div class="col-sm-2">
-
-        <input
-                class="btn btn-primary active" id="bbuscar"
-                type="button"
-                value="Buscar">
-        <script>
-            $(document).ready(function () {
-                $("#bbuscar").click(function () {
-                    $("#usr").text();
-                });
-            });
-
-        </script>
-    </div>
-
-    <div id="resultado" class="col-sm-10"
-
-</div>
-
-</div>
 </div>
     <!---
         <form action= "http://api.github.com/" class= "login-form"  method="get">
@@ -57,7 +82,7 @@
                 <input type="text" name= "/users">
             </div>
             <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
-        <!---<div class="bottom-text"> <p>Encuentra tu usuario</p>--->
+    <div class="bottom-text"> <p>Encuentra tu usuario</p> --->
 
 </body>
 </html>
