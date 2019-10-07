@@ -17,12 +17,7 @@
     <script>
         $(document).ready(function () {
             $("#x").click(function () {
-                $(".table").empty();
-                $.get("https://api.github.com/users/" + $("#usr").val() + "/repos", function (data, status) {
-                    for (var I = 0; data.length; i++) {
-                        $("table").append("<tr><td>") + data[i].name + "<tr><td>" + data[i].description +
-                        "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>"
-                    }
+
                 });
 
 
@@ -42,7 +37,6 @@
             <div class="form-group">
                 <label> Nombre:</label>
                 <input type="text" class="form-control" id="usr">
-                <p id="prueba">Mostrar fkffkffkfusuario</p>
             </div>
         </div>
 
@@ -51,8 +45,14 @@
             <button id= bbuscar type= "button" class="btn-success">Buscar</button>
             <script>
                 $(function () {
-                    $("#bbuscar").click(function(){
-                        $("#respuesta").hide();
+                    $("#bbuscar").click(function () {
+                        $(".table").empty();
+                        $.get("https://api.github.com/users/" + $("#usr").val() + "/repos", function (data, status) {
+                            for (var I = 0; data.length; i++) {
+                                $("table").append("<tr><td>") + data[i].name + "<tr><td>" + data[i].description +
+                                "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>"
+                            }
+                        });
                     });
                 });
 
@@ -63,13 +63,14 @@
         <div class="col-sm-10">
 
             <div class="table-responsive">
-                <table id= respuesta class="table">
+                <table class="table">
                     <thead>
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Seguidores</th>
                     </thead>
-                    <tbody>
+                    <tbody  id= respuesta>
+                        <td>Hola</td>
                     </tbody>
 
                 </table>
