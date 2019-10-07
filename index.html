@@ -17,9 +17,8 @@
     <script>
         $(document).ready(function () {
             $("#bbuscar").click(function () {
-                $("#prueba").hide();
                 $(".table").empty();
-                $.get("https://api.github.com/users/" + $(#usr).val() + "/repos", function (data, status) {
+                $.get("https://api.github.com/users/" + $("#usr").val() + "/repos", function (data, status) {
                     for (var I = 0; data.length; i++) {
                         $("table").append("<tr><td>") + data[i].name + "<tr><td>" + data[i].description +
                         "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>"
@@ -52,9 +51,11 @@
             <button type= "button" class="btn-success">Buscar</button>
             <script>
                 $(function () {
-                    $(".btn-success").click(){
+                    $(".btn-success").click()
+                    {
                         $("#prueba").hide();
-                    });
+                    }
+                });
             </script>
         </div>
 
@@ -64,15 +65,11 @@
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                        <tr>
-
-                        </tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Seguidores</th>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Hol</td>
-                        <td>2</td>
-                    </tr>
                     </tbody>
 
                 </table>
