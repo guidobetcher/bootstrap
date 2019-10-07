@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -18,11 +17,12 @@
         $(document).ready(function () {
             $("#x").click(function () {
 
-                });
-
-
             });
+
+
         });
+        })
+        ;
 
 
     </script>
@@ -36,21 +36,20 @@
         <div class="col-sm-10">
             <div class="form-group">
                 <label> Nombre:</label>
-                <input id="usr" type="text" class="form-control" >
+                <input id="usr" type="text" class="form-control">
             </div>
         </div>
 
         <div class="col-sm-2">
             <p id="dos">Venga</p>
-            <button id= bbuscar type= "button" class="btn-success">Buscar</button>
+            <button id=bbuscar type="button" class="btn-success">Buscar</button>
             <script>
                 $(function () {
                     $("#bbuscar").click(function () {
                         $("#respuesta").empty();
                         $.get("https://api.github.com/users/" + $("#usr").val() + "/repos", function (data, status) {
                             for (var i = 0; data.length; i++) {
-                                $("#respuesta").append("<tr><td>" + data[i].name + "<tr><td>" + data[i].description +
-                                "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>");
+                                $("#respuesta").append("<tr><td>" + data[i].name + "</td><td>" + data[i].description + "</td><td>" + data[i].stargazers_count + "</td></tr>");
                             }
                         });
                     });
@@ -65,12 +64,12 @@
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                        <th>Nombre</th>
-                        <th>Descripción</th>
-                        <th>Seguidores</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Seguidores</th>
                     </thead>
-                    <tbody  id= respuesta>
-                        <td>Hola</td>
+                    <tbody id=respuesta>
+                    <td>Hola</td>
                     </tbody>
 
                 </table>
@@ -81,13 +80,13 @@
     </div>
 
 </div>
-    <!---
-        <form action= "http://api.github.com/" class= "login-form"  method="get">
-            <div>
-                <input type="text" name= "/users">
-            </div>
-            <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
-    <div class="bottom-text"> <p>Encuentra tu usuario</p> --->
+<!---
+    <form action= "http://api.github.com/" class= "login-form"  method="get">
+        <div>
+            <input type="text" name= "/users">
+        </div>
+        <input type="submit"  id="enviarS" class="btn btn-success btn-md" value="Buscar">
+<div class="bottom-text"> <p>Encuentra tu usuario</p> --->
 
 </body>
 </html>
