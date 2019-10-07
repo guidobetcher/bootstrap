@@ -41,7 +41,7 @@
         </div>
 
         <div class="col-sm-2">
-
+            <p id="dos">Venga</p>
             <button id= bbuscar type= "button" class="btn-success">Buscar</button>
             <script>
                 $(function () {
@@ -49,9 +49,9 @@
                         $("#respuesta").empty();
                         $.get("https://api.github.com/users/" + $("#usr").val() + "/repos", function (data, status) {
                             for (var i = 0; data.length; i++) {
-                                $("#respuesta").append("<tr><td>") + data[i].name + "<tr><td>" + data[i].description +
-                                "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>"
-                            };
+                                $("#respuesta").append("<tr><td>" + data[i].name + "<tr><td>" + data[i].description +
+                                "</td><td>" + data[i].description + "</td><td>" + data.stargazers_count + "</td><tr>");
+                            }
                         });
                     });
                 });
